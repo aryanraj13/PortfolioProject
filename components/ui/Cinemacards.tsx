@@ -1,17 +1,10 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { cn } from "@/utils/cn";
 import { gilroy } from "@/utils/fonts";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-
-// Define type for movie items
-type MovieItem = {
-  name: string;
-  poster: string;
-  director: string;
-  year: string;
-};
+import React, { useEffect, useState, useCallback } from "react";
 
 export const Cinema = ({
   items,
@@ -20,7 +13,12 @@ export const Cinema = ({
   pauseOnHover = false,
   className,
 }: {
-  items: MovieItem[];
+  items: {
+    name: string;
+    poster: string;
+    director?: string;
+    year?: string;
+  }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
@@ -31,24 +29,22 @@ export const Cinema = ({
 
   const [start, setStart] = useState(false);
 
-  useEffect(() => {
-    addAnimation();
-  }, []);
-
-  function addAnimation() {
+  const addAnimation = useCallback(() => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
-
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         scrollerRef.current?.appendChild(duplicatedItem);
       });
-
       getDirection();
       getSpeed();
       setStart(true);
     }
-  }
+  }, [direction, speed]);
+
+  useEffect(() => {
+    addAnimation();
+  }, [addAnimation]);
 
   const getDirection = () => {
     if (containerRef.current) {
@@ -61,8 +57,7 @@ export const Cinema = ({
 
   const getSpeed = () => {
     if (containerRef.current) {
-      const duration =
-        speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s";
+      const duration = speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s";
       containerRef.current.style.setProperty("--animation-duration", duration);
     }
   };
@@ -71,15 +66,15 @@ export const Cinema = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
-          start && "animate-scroll",
+          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
@@ -94,20 +89,15 @@ export const Cinema = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               <span>
-                <Image
-                  src={item.poster}
-                  alt={`Poster for ${item.name}`}
-                  width={200}
-                  height={300}
-                />
+                <Image src={item.poster} alt="poster" width={200} height={300} />
               </span>
-              <span className="flex justify-between w-full text-slate-400 mt-2 text-sm">
-                <span className="text-left">{item.director}</span>
-                <span className="text-right">{item.year}</span>
-              </span>
-              <span className={`text-xl mt-1 block ${gilroy}`}>
-                {item.name}
-              </span>
+              {(item.director || item.year) && (
+                <span className="flex justify-between w-full text-slate-400">
+                  <span className="text-left">{item.director}</span>
+                  <span className="text-right">{item.year}</span>
+                </span>
+              )}
+              <span className={`text-xl ${gilroy}`}>{item.name}</span>
             </blockquote>
           </li>
         ))}
