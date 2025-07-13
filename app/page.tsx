@@ -20,8 +20,8 @@ export default function Home() {
        <div className="max-w-7xl w-full">
         
         
-        {/* <Grid/>
-        <RecentProjects/>
+         <Grid/>
+        {/*<RecentProjects/>
         <Projects/>
         <Experience/> */}
         {/* <Approach/> */}
