@@ -22,8 +22,8 @@ export default function Home() {
         
          {/* <Grid/> */}
         <RecentProjects/>
-        {/*<Projects/>
-        <Experience/> */}
+        <Projects/>
+        {/*<Experience/> */}
         {/* <Approach/> */}
         {/* <Footer/> */}
       </div>
