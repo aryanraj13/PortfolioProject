@@ -19,16 +19,6 @@ export const navItems = [
       spareImg: "",
     },
     {
-      id: 2,
-      title: "I'm very flexible with time zone communications",
-      description: "",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-      imgClassName: "",
-      titleClassName: "justify-start",
-      img: "",
-      spareImg: "",
-    },
-    {
       id: 3,
       title: "My tech stack",
       description: "I constantly try to improve",
@@ -37,8 +27,7 @@ export const navItems = [
       titleClassName: "justify-center",
       img: "",
       spareImg: "",
-    },
-  
+    },  
     {
       id: 5,
       title: "Currently learning Blockchain",
@@ -49,6 +38,7 @@ export const navItems = [
       img: "/blockchain.jpeg",
       spareImg: "/grid.svg",
     },
+
   ];
   
   export const projects = [
