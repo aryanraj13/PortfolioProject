@@ -163,31 +163,35 @@ export const HeroParallax = ({
       
       
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product, index) => (
-  <ProductCard
-    product={product}
-    translate={translateX}
-    key={`${product.title}-${index}`} // ✅ Unique key
-  />
-))}
+  {firstRow.map((product, index) => (
+    <ProductCard
+      product={product}
+      translate={translateX}
+      key={`first-${product.title}-${index}`}
+    />
+  ))}
+</motion.div>
 
-{secondRow.map((product, index) => (
-  <ProductCard
-    product={product}
-    translate={translateXReverse}
-    key={`${product.title}-${index}`} // ✅ Unique key
-  />
-))}
+<motion.div className="flex flex-row space-x-20 mb-20">
+  {secondRow.map((product, index) => (
+    <ProductCard
+      product={product}
+      translate={translateXReverse}
+      key={`second-${product.title}-${index}`}
+    />
+  ))}
+</motion.div>
 
-{thirdRow.map((product, index) => (
-  <ProductCard
-    product={product}
-    translate={translateX}
-    key={`${product.title}-${index}`} // ✅ Unique key
-  />
-))}
+<motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+  {thirdRow.map((product, index) => (
+    <ProductCard
+      product={product}
+      translate={translateX}
+      key={`third-${product.title}-${index}`}
+    />
+  ))}
+</motion.div>
 
-        </motion.div>
       
     </div>
   );
@@ -236,3 +240,7 @@ export const ProductCard = ({
     </motion.div>
   );
 };
+
+
+
+

@@ -23,6 +23,7 @@
     "file-system": "^2.2.2",
     "framer-motion": "^11.3.0",
     "mini-svg-data-uri": "^1.4.4",
+    "motion": "^12.23.3",
     "next": "14.2.4",
     "next-themes": "^0.3.0",
     "qss": "^3.0.0",
@@ -32,7 +33,7 @@
     "react-image-particles": "^1.0.8",
     "react-lottie": "^1.2.4",
     "simplex-noise": "^4.0.2",
-    "tailwind-merge": "^2.4.0",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.166.0",
     "three-globe": "^2.31.1"
