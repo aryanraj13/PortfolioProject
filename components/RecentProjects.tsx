@@ -65,7 +65,16 @@ const RecentProjectsContent = ({
         <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
         <AnimatePresence>
           <div className="h-full w-full absolute inset-0">
-            
+            <CanvasRevealEffect
+                animationSpeed={3}
+                containerClassName="bg-black"
+                colors={[
+                  [236, 72, 153],
+                  [232, 121, 249],
+                ]}
+                dotSize={2}
+              />
+
           </div>
         </AnimatePresence>
         <div className="relative z-20">
