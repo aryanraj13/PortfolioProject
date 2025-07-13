@@ -41,7 +41,7 @@ const Page = () => {
           </div>
         </motion.h1>
         <div className="flex flex-col antialiased items-center justify-center relative overflow-hidden">
-          <Cinema items={cinemaposters} direction="right" speed="slow" />
+          <Cinema items={cinemaposters} direction="right" speed="normal" />
         </div>
       </div>
       <BackgroundBeams />
