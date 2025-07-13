@@ -25,7 +25,7 @@ export default function Home() {
         <Projects/>
         <Experience/>
         {/* <Approach/> */}
-        {/* <Footer/> */}
+        <Footer/> 
       </div>
     </main>
     </>
