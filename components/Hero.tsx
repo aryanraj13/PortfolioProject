@@ -1,6 +1,5 @@
 import { FaDownload, FaLocationArrow } from "react-icons/fa6";
 import { BackgroundBeams } from "@/components/ui/Spotlight";
-import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import MagicButton from "@/components/ui/MagicButton";
 import { FlipWords } from "@/components/ui/Flip-Words";
 import { socialMedia } from "@/data";
