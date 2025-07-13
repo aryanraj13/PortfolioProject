@@ -8,16 +8,18 @@ export const navItems = [
 
   
   export const gridItems = [
+
     {
-      id: 2,
-      title: "I'm very flexible with time zone communications",
-      description: "",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-      imgClassName: "",
-      titleClassName: "justify-start",
-      img: "",
-      spareImg: "",
-    }
+      id: 5,
+      title: "Currently learning Blockchain",
+      description: "Current status : ",
+      className: "md:col-span-3 md:row-span-2",
+      imgClassName: "absolute w-full md:w-full h-full lg:w-full",
+      titleClassName: "justify-center md:justify-start lg:justify-center",
+      img: "/blockchain.jpeg",
+      spareImg: "/grid.svg",
+    },
+    
   ];
   
   export const projects = [
