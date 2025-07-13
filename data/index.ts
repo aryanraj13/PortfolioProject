@@ -38,16 +38,6 @@ export const navItems = [
       img: "",
       spareImg: "",
     },
-    {
-      id: 4,
-      title: "",
-      description: "",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-      imgClassName: "",
-      titleClassName: "",
-      img: "",
-      spareImg: "",
-    },
   
     {
       id: 5,
@@ -58,16 +48,6 @@ export const navItems = [
       titleClassName: "justify-center md:justify-start lg:justify-center",
       img: "/blockchain.jpeg",
       spareImg: "/grid.svg",
-    },
-    {
-      id: 6,
-      title: "Do you want to start a project together?",
-      description: "",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-      imgClassName: "",
-      titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-      img: "",
-      spareImg: "",
     },
   ];
   
