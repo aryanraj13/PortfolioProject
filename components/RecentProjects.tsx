@@ -87,7 +87,7 @@ const RecentProjectsContent = ({
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
             key={item.id}
           >
-            
+            <Modal>
               <PinContainer title={item.link} href={item.link}>
                 <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
                   <div
@@ -130,7 +130,12 @@ const RecentProjectsContent = ({
                   </div>
 
                   <div className="flex justify-center items-center">
-                    
+                    <ModalTrigger onClick={() => setActiveProject(item)}>
+                      <span className="flex lg:text-xl md:text-xs text-sm mr-4 text-purple hover:text-indigo-700">
+                        Description
+                        <CgNotes className="ms-2 mt-1" color="#CBACF9" />
+                      </span>
+                    </ModalTrigger>
                     <Link href={item.link} target="_blank">
                       <p className="flex lg:text-xl md:text-xs text-sm text-green-500 hover:text-green-700">
                         Live Site
@@ -141,7 +146,8 @@ const RecentProjectsContent = ({
                 </div>
               </PinContainer>
 
-              
+              <ModalBody>
+                <ModalContent>
                   {activeProject && (
                     <div className="p-6">
                       <h2 className="text-2xl font-bold text-purple-500 mb-4">
@@ -167,7 +173,9 @@ const RecentProjectsContent = ({
                       </div>
                     </div>
                   )}
-                
+                </ModalContent>
+              </ModalBody>
+            </Modal>
           </div>
         ))}
       </div>

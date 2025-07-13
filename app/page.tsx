@@ -20,12 +20,12 @@ export default function Home() {
        <div className="max-w-7xl w-full">
         
         
-        <Grid/>
+        {/* <Grid/>
         <RecentProjects/>
         <Projects/>
-        <Experience/>
+        <Experience/> */}
         {/* <Approach/> */}
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     </main>
     </>
