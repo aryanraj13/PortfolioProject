@@ -17,28 +17,7 @@ export const navItems = [
       titleClassName: "",
       img: "/photo_6060146018424569263_y.jpg",
       spareImg: "",
-    },
-    {
-      id: 3,
-      title: "My tech stack",
-      description: "I constantly try to improve",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-      imgClassName: "",
-      titleClassName: "justify-center",
-      img: "",
-      spareImg: "",
-    },  
-    {
-      id: 5,
-      title: "Currently learning Blockchain",
-      description: "Current status : ",
-      className: "md:col-span-3 md:row-span-2",
-      imgClassName: "absolute w-full md:w-full h-full lg:w-full",
-      titleClassName: "justify-center md:justify-start lg:justify-center",
-      img: "/blockchain.jpeg",
-      spareImg: "/grid.svg",
-    },
-
+    }
   ];
   
   export const projects = [
