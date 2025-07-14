@@ -15,7 +15,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       {cards.map((card) => (
         <div key={card.id}>
           <motion.div
-            className="relative overflow-hidden bg-white rounded-xl"
+            className="relative overflow-hidden rounded-xl"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >

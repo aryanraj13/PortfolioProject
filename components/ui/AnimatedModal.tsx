@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import React, {
@@ -11,6 +12,7 @@ import React, {
 } from "react";
 import { Meteors } from "./Meteros";
 
+// Context
 interface ModalContextType {
   open: boolean;
   setOpen: (open: boolean) => void;
@@ -73,20 +75,16 @@ export const ModalBody = ({
   className?: string;
 }) => {
   const { open, setOpen } = useModal();
-
   const modalRef = useRef(null);
 
-  // ✅ Fix: Safe scroll lock with document check
   useEffect(() => {
     if (typeof document === "undefined") return;
     document.body.style.overflow = open ? "hidden" : "auto";
-
     return () => {
       document.body.style.overflow = "auto";
     };
   }, [open]);
 
-  // ✅ Fix: Safe outside click handler
   useOutsideClick(modalRef, () => setOpen(false));
 
   return (
@@ -94,15 +92,14 @@ export const ModalBody = ({
       {open && (
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, backdropFilter: "blur(10px)" }}
-          exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-          className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-50"
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
         >
-          <Overlay />
           <motion.div
             ref={modalRef}
             className={cn(
-              "min-h-[50%] max-h-[90%] md:max-w-[80%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+              "w-full max-w-4xl max-h-[90vh] h-auto overflow-hidden bg-white dark:bg-neutral-950 border dark:border-neutral-800 rounded-xl relative z-50 flex flex-col",
               className
             )}
             initial={{ opacity: 0, scale: 0.5, rotateX: 40, y: 40 }}
@@ -127,40 +124,13 @@ export const ModalContent = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col flex-1", className)}>
-      {children}
-      <Meteors number={100} className="-z-10" />
+    <div className={cn("flex flex-col flex-1 relative", className)}>
+      {/* Scrollable content wrapper */}
+      <div className="overflow-y-auto max-h-[75vh] px-6 py-6 pr-4">
+        {children}
+      </div>
+      <Meteors number={60} className="-z-10" />
     </div>
-  );
-};
-
-export const ModalFooter = ({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) => {
-  return (
-    <div
-      className={cn(
-        "flex justify-end p-4 bg-gray-100 dark:bg-neutral-900",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
-};
-
-const Overlay = ({ className }: { className?: string }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, backdropFilter: "blur(10px)" }}
-      exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-      className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-50 ${className}`}
-    />
   );
 };
 
@@ -169,7 +139,7 @@ const CloseIcon = () => {
   return (
     <button
       onClick={() => setOpen(false)}
-      className="absolute top-4 right-4 group"
+      className="absolute top-4 right-4 group z-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +161,7 @@ const CloseIcon = () => {
   );
 };
 
-// ✅ Safe Outside Click Hook
+// Outside Click Hook
 export const useOutsideClick = (
   ref: React.RefObject<HTMLDivElement>,
   callback: Function

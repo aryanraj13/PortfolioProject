@@ -157,32 +157,58 @@ const RecentProjectsContent = ({
 
               <ModalBody>
                 <ModalContent>
-                  {activeProject && (
-                    <div className="p-6">
-                      <h2 className="text-2xl font-bold text-purple-500 mb-4">
-                        {activeProject.title}
-                      </h2>
-                      <img
-                        src={activeProject.img}
-                        alt={activeProject.title}
-                        className="w-full max-h-64 object-contain rounded-xl mb-4"
-                      />
-                      <p className="text-gray-300 text-lg mb-4">
-                        {activeProject.des}
-                      </p>
-                      <div className="flex gap-3 flex-wrap">
-                        {activeProject.iconLists.map((icon:string, index:number) => (
-                          <img
-                            key={index}
-                            src={icon}
-                            alt={`tech-${index}`}
-                            className="h-10 w-10 p-1 border border-gray-700 rounded-full bg-black"
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </ModalContent>
+  {activeProject && (
+  <div className="w-full flex flex-col items-center text-center">
+    {/* Title */}
+    <h2 className="text-2xl font-bold text-purple-500 mb-2">
+      {activeProject.title}
+    </h2>
+
+    {/* Subtitle */}
+    <p className="text-gray-300 text-lg mb-6 max-w-2xl">
+      {activeProject.des}
+    </p>
+
+    {/* Media Section */}
+    <div className="space-y-10 mb-10 w-full flex flex-col items-center">
+      {activeProject.media?.map(
+        (item: { src: string; desc: string }, index: number) => (
+          <div
+            key={index}
+            className="flex flex-col items-center text-center w-full max-w-3xl"
+          >
+            <img
+              src={item.src}
+              alt={`project-${index}`}
+              className="w-full rounded-xl border border-neutral-800 object-cover"
+            />
+            <p className="text-white text-base mt-3 max-w-xl">{item.desc}</p>
+          </div>
+        )
+      )}
+    </div>
+
+    {/* Icons on the Right */}
+    <div className="w-full flex justify-start pr-6">
+      <div className="flex gap-3 flex-wrap">
+        {activeProject.iconLists.map((icon: string, index: number) => (
+          <img
+            key={index}
+            src={icon}
+            alt={`tech-${index}`}
+            className="h-8 w-8 p-1 border border-gray-700 rounded-full bg-black"
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
+
+
+
+</ModalContent>
+
               </ModalBody>
             </Modal>
           </div>

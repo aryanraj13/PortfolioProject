@@ -72,39 +72,140 @@ export const navItems = [
   ];
   
   export const projects = [
-    {
-      id: 1,
-      title: "MarketMentor - Stocks Chatbot",
-      des: "An open-source AI chatbot leveraging function calling to display TradingView stock market widgets. Built with the TradingView Widgets, and powered by Llama3-70b on Groq.",
-      img: "/marketmentor.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "https://marketmentor.netlify.app/",
-    },
-    {
-      id: 2,
-      title: "BoxZone - Ecommerce",
-      des: "BoxZone is an innovative e-commerce application built with cutting-edge technologies. It handles data with high scalability & performance.",
-      img: "/pr1.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "https://boxzone.netlify.app/",
-    },
-    {
-      id: 3,
-      title: "LikeLoop - Social Media Application",
-      des: "LikeLoop is a dynamic social media application that brings people together, allowing users to share updates, connect with friends.",
-      img: "/like.png",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-      link: "https://likeloop.netlify.app/",
-    },
-    {
-      id: 4,
-      title: "Globe Glider - Travel & Tourism Website",
-      des: "Welcome to Globe Glider, your ultimate destination for seamless travel experiences. Immerse yourself in the beauty of diverse cultures, breathtaking landscapes, and unforgettable adventures.",
-      img: "/package1.png",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "https://github.com/aryanraj13/Travel-and-Tourism-Website",
-    },
-  ];
+  {
+    id: 1,
+    title: "MarketMentor - Stocks Chatbot",
+    des: "An open-source AI chatbot leveraging function calling to display TradingView stock market widgets.",
+    img: "/marketmentor.png",
+    media: [
+      {
+        src: "/frontmarket.png",
+        desc: "MarketMentor leverages the Llama3-70b model for natural language understanding.It delivers intelligent, real-time answers to user financial queries. Groq backend acceleration ensures ultra-fast AI response times."
+      },
+      {
+        src: "/front1.png",
+        desc: "Integrated TradingView widgets show real-time charts and metrics. Users can explore stock prices, heatmaps, screeners, and news. The visual data updates instantly based on chat inputs."
+      },
+      {
+        src: "/front2.png",
+        desc: "The frontend is built using React and Next.js for seamless performance.Server-side rendering enables faster load times and dynamic updates. Users enjoy a smooth, responsive chat and charting experience."
+      },
+      {
+        src: "/front3.png",
+        desc: "Next.js API routes connect user input with AI and financial APIs. Queries are processed and enriched with real-time stock data.The backend ensures accurate, relevant financial insights delivery."
+      },
+      {
+        src: "/front4.png",
+        desc: "Styled with Tailwind CSS for a mobile-friendly, elegant layout. Each UI component adapts beautifully across screen sizes. User experience is intuitive, fast, and visually consistent."
+      },
+      {
+        src: "/front5.png",
+        desc: "The interface updates in real-time based on user queries. Charts, financials, and AI responses appear contextually. This ensures a personalized and interactive user experience."
+      }
+    ],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/c.svg","/app.svg","/fm.svg"],
+    link: "https://marketmentor.netlify.app/"
+  },
+  {
+    id: 2,
+    title: "BoxZone - Ecommerce",
+    des: "A modern e-commerce platform with advanced scalability and responsiveness.",
+    img: "/pr1.png",
+    media: [
+      {
+        src: "/ecom1.png",
+        desc: "BoxZone is a modern e-commerce site built using Next.js and MongoDB. It ensures encrypted transactions and user data protection using AES-256. JWT-based authentication secures user sessions and access control."
+      },
+      {
+        src: "/ecom2.png",
+        desc: "Built with server-side rendering via Next.js for better SEO and performance. MongoDB provides a scalable and flexible backend for managing data. Cloud-hosted for fast delivery and responsive access across devices."
+      },
+      {
+        src: "/ecom3.png",
+        desc: "The platform includes AI modules for anomaly detection and fraud prevention. User behavior is analyzed to flag suspicious activities during transactions. This boosts user trust and reduces risk of payment manipulation."
+      },
+      {
+        src: "/ecom4.png",
+        desc: "Supports role-based access control (RBAC) for users and admins. JWT tokens are used to secure API access and protect user routes.Middleware ensures only authenticated users can perform key actions."
+      },
+      {
+        src: "/ecom5.png",
+        desc: "Cart, order placement, and checkout flow are fully implemented. Sensitive user and order data are securely stored with encryption.Payment gateway integration supports secure online payments."
+      },
+      {
+        src: "/ecom6.png",
+        desc: "Tailored for a smooth shopping experience across all screen sizes. Next.js optimizations ensure fast page transitions and load times. UI focuses on simplicity, speed, and usability for all user roles."
+      },
+      {
+        src: "/ecom7.png",
+        desc: "The project follows a clean MVC structure with modular APIs and models. Separate files handle users, products, and orders for scalability. This structure simplifies debugging, updates, and future feature additions."
+      }
+    ],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/nodejs.png","/mongodb.png"],
+    link: "https://boxzone.netlify.app/"
+  },
+  {
+    id: 3,
+    title: "LikeLoop - Social Media App",
+    des: "A real-time social media platform to share updates and connect with friends.",
+    img: "/like.png",
+    media: [
+      {
+        src: "/media1.png",
+        desc: "LikeLoop is built using the MERN stack with JWT-based authentication. It allows users to securely sign up, log in, and interact with others. User data and sessions are protected through encrypted tokens."
+      },
+      {
+        src: "/media2.png",
+        desc: "Users can create, edit, and delete posts in a real-time social feed. Each post supports media uploads, likes, and threaded comments. This fosters engagement and user interaction within the app."
+      },
+      {
+        src: "/media3.png",
+        desc: "Every user has a customizable profile displaying their posts and info. Profiles can be explored by other users for networking and discovery. Profile updates are dynamic and synced with Redux store."
+      },
+      {
+        src: "/media4.png",
+        desc: "Advanced search helps users find posts and friends instantly. Real-time updates ensure users are notified about likes or comments.This keeps the platform active and responsive at all times."
+      },
+      {
+        src: "/media5.png",
+        desc: "The app features a clean, responsive layout using Material-UI. Consistent styling and component reuse create a smooth UX. It adapts seamlessly across desktops, tablets, and phones."
+      }
+    ],
+    iconLists: ["/next.svg", "/tail.svg", "/nodejs.png","/mongodb.png","/ts.svg", "/stream.svg"],
+    link: "https://likeloop.netlify.app/"
+  },
+  {
+    id: 4,
+    title: "Globe Glider - Travel Website",
+    des: "A full-fledged tourism website to explore and book global travel experiences.",
+    img: "/package1.png",
+    media: [
+      {
+        src: "/ph1.png",
+        desc: "Globe Glider helps users explore destinations and plan custom trips. Built with PHP, HTML, CSS, JavaScript, and Bootstrap for dynamic pages. It offers a smooth and interactive user experience for travelers."
+      },
+      {
+        src: "/ph2.png",
+        desc: "Users can design personalized tour packages using built-in surveys. Preferences like budget, travel dates, and destinations are gathered. It generates tailored plans based on user inputs and interests."
+      },
+      {
+        src: "/ph3.png",
+        desc: "The site integrates Razorpay for secure, fast, and reliable payments. Users can book tours and pay online without leaving the platform. This streamlines the checkout process for hassle-free travel planning."
+      },
+      {
+        src: "/ph5.png",
+        desc: "The platform features interactive maps and curated destination info. Users can explore highlights, attractions, and travel routes visually. This helps travelers better plan their journeys before booking."
+      },
+      {
+        src: "/ph4.png",
+        desc: "Globe Glider is built with Bootstrap to ensure responsive design. Whether on desktop or mobile, the layout adjusts for a smooth UX. Travel planning is accessible anytime, anywhere."
+      }
+    ],
+    iconLists: ["/php.png", "/js.png", "/html.png", "/database.png"],
+    link: "https://github.com/aryanraj13/Travel-and-Tourism-Website"
+  }
+];
+
   
   export const testimonials = [
     {
