@@ -27,8 +27,8 @@ const Footer = () => {
             Discuss a project or just want to say hi? My Inbox is open for all.
             </p>
             <div className='gap-6 flex flex-col md:flex-row lg:flex-row'>
-            <a href='mailto:aryanraj409.1.2@gmail.com'>
-                <MagicButton title="aryanraj409.1.2@gmail.com"
+            <a href='mailto:aryanrajput200321@gmail.com'>
+                <MagicButton title="aryanrajput200321@gmail.com"
                 icon={<FaLocationArrow/>}
                 position='right'/>
             </a>

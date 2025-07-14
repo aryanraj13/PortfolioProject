@@ -1,10 +1,7 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "motion/react";
 import { cn } from "@/utils/cn";
-import Image from "next/image";
-import { BackgroundGradientAnimation } from "./GradientBg";
-import { TracingBeam } from "./TracingBeam";
 
 type Card = {
   id: number;
@@ -28,7 +25,6 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <TracingBeam>
     <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
@@ -38,15 +34,15 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               "relative overflow-hidden",
               selected?.id === card.id
-                ? "rounded-lg cursor-pointer  relativemd:w-1/2 m-auto z-50 flex flex-wrap"
+                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
                 : lastSelected?.id === card.id
                 ? "z-40 bg-white rounded-xl h-full w-full"
                 : "bg-white rounded-xl h-full w-full"
             )}
-            layout
+            layoutId={`card-${card.id}`}
           >
             {selected?.id === card.id && <SelectedCard selected={selected} />}
-            <BlurImage card={card} />
+            <ImageComponent card={card} />
           </motion.div>
         </div>
       ))}
@@ -59,21 +55,18 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
       />
     </div>
-    </TracingBeam>
   );
 };
 
-const BlurImage = ({ card }: { card: Card }) => {
-  const [loaded, setLoaded] = useState(false);
+const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <Image
+    <motion.img
+      layoutId={`image-${card.id}-image`}
       src={card.thumbnail}
       height="500"
       width="500"
-      onLoad={() => setLoaded(true)}
       className={cn(
-        "object-cover object-top  inset-0 h-full w-full transition duration-200",
-        loaded ? "blur-none" : "blur-md"
+        "object-cover object-top absolute inset-0 h-full w-full transition duration-200"
       )}
       alt="thumbnail"
     />
@@ -82,7 +75,6 @@ const BlurImage = ({ card }: { card: Card }) => {
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => {
   return (
-
     <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
       <motion.div
         initial={{
@@ -91,9 +83,10 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         animate={{
           opacity: 0.6,
         }}
-        className="absolute  h-full w-full opacity-60 z-10"
+        className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
       />
       <motion.div
+        layoutId={`content-${selected?.id}`}
         initial={{
           opacity: 0,
           y: 100,
@@ -101,6 +94,10 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         animate={{
           opacity: 1,
           y: 0,
+        }}
+        exit={{
+          opacity: 0,
+          y: 100,
         }}
         transition={{
           duration: 0.3,

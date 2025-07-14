@@ -160,6 +160,9 @@ export const HeroParallax = ({
       ref={ref}
       className=" pt-32 pb-10 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
+      <p className='text-white-200 text-sm md:mt-10 lg:mt-5 mt-9 text-center mb-5 md:mb-5 lg:mb-5'>
+            Click any image to see the project live link or Github repository.
+            </p>
       
       
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">

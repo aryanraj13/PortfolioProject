@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState, memo } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/utils/cn";
 
@@ -148,44 +148,31 @@ export const TextRevealCardDescription = ({
 };
 
 const Stars = () => {
-  const [starStyles, setStarStyles] = useState<
-    { top: string; left: string; duration: number; opacity: number }[]
-  >([]);
-
-  useEffect(() => {
-    const generateStars = () =>
-      Array.from({ length: 80 }, () => ({
-        top: `${Math.random() * 100}%`,
-        left: `${Math.random() * 100}%`,
-        duration: Math.random() * 10 + 20,
-        opacity: Math.random(),
-      }));
-
-    setStarStyles(generateStars());
-  }, []);
-
+  const randomMove = () => Math.random() * 4 - 2;
+  const randomOpacity = () => Math.random();
+  const random = () => Math.random();
   return (
     <div className="absolute inset-0">
-      {starStyles.map((style, i) => (
+      {[...Array(80)].map((_, i) => (
         <motion.span
           key={`star-${i}`}
           animate={{
-            top: `calc(${style.top} + ${Math.random() * 4 - 2}px)`,
-            left: `calc(${style.left} + ${Math.random() * 4 - 2}px)`,
-            opacity: style.opacity,
+            top: `calc(${random() * 100}% + ${randomMove()}px)`,
+            left: `calc(${random() * 100}% + ${randomMove()}px)`,
+            opacity: randomOpacity(),
             scale: [1, 1.2, 0],
           }}
           transition={{
-            duration: style.duration,
+            duration: random() * 10 + 20,
             repeat: Infinity,
             ease: "linear",
           }}
           style={{
             position: "absolute",
-            top: style.top,
-            left: style.left,
-            width: "2px",
-            height: "2px",
+            top: `${random() * 100}%`,
+            left: `${random() * 100}%`,
+            width: `2px`,
+            height: `2px`,
             backgroundColor: "white",
             borderRadius: "50%",
             zIndex: 1,
@@ -197,5 +184,7 @@ const Stars = () => {
   );
 };
 
-
 export const MemoizedStars = memo(Stars);
+
+
+

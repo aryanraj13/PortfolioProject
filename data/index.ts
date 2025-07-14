@@ -177,7 +177,7 @@ export const navItems = [
       id: 1,
       title: "Jaypee Institute of Information Technology, Noida",
       desc: "B.Tech Computer Science",
-      timeframe:"September 2022 - April 2026 (Currently in 5th semester)",
+      timeframe:"September 2022 - April 2026 (Currently in 4th year)",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
@@ -215,7 +215,7 @@ export const navItems = [
     {
       id: 5,
       img: "/google.svg",
-      src: "mailto:aryanraj409.1.2@gmail.com",
+      src: "mailto:aryanrajput200321@gmail.com",
     },
     {
       id: 6,

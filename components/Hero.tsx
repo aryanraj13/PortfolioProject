@@ -44,7 +44,7 @@ const Hero = () => {
       <div className='pt-9 justify-center flex items-center md:gap-3 gap-6'>
                 {socialMedia.map((profile)=>(
                     <div key={profile.id} className='w-10 h-10 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-100 rounded-lg border border-black-300 z-10 hover:bg-gray-900'>
-                      <Link href={profile.src}> 
+                      <Link href={profile.src} target="_blank"> 
                         <Image src={profile.img} alt={profile.img}
                         width={20} height={20} />
                         </Link>
@@ -53,7 +53,7 @@ const Hero = () => {
             </div>
 
       <div className="text-center">
-      <a href="https://drive.google.com/file/d/1BWm8_bVPTvWfgL2hQI3CfzJRKWBGaiQs/view?usp=sharing" 
+      <a href="https://drive.google.com/file/d/1eLTnaAhFnmER3S2XcPGG4EOX7o_Et5Hq/view?usp=sharing" 
       target="_blank"
       rel="noopener noreferrer">
         <div className="mt-12 md:mt-0 lg:mt-0 relative z-10">

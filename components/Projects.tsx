@@ -28,6 +28,7 @@ const Projects = () => {
         </LinkPreview>
         </div>
         </Vortex>
+        
       <HeroParallax products={products} />
     </section>
   )
