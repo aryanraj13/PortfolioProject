@@ -78,11 +78,15 @@ const RecentProjectsContent = ({
           </div>
         </AnimatePresence>
         <div className="relative z-20">
-          <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 text-5xl font-bold text-shadow text-shadow-fuchsia-800">
-            Recent<span className={`${nyght} mx-3 mt-1.5`}>Projects</span>
-          </div>
+          <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 font-bold text-shadow text-shadow-fuchsia-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-2">
+  Recent
+  <span className={`${nyght} mx-2 sm:mx-3 block sm:inline mt-1.5`}>
+    Projects
+  </span>
+</div>
+
           <h2
-            className={`dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 z-10 text-black mt-4 font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 ${gilroy}`}
+            className={`text-center dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 z-10 text-black mt-4 font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 ${gilroy}`}
           >
             A small selection of my recent works.
           </h2>

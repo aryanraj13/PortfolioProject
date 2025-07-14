@@ -135,10 +135,15 @@ export const BentoGridItem = ({
           {id === 2 && <GridGlobe />}
 
           {id === 4 && (
-            <div className="w-fit h-fit">
-              <TextRevealCard text="Engineer turned" revealText="Developer" />
-            </div>
-          )}
+  <div className="w-full flex justify-center items-center px-2 sm:px-4 py-2">
+    <TextRevealCard 
+      text="Engineer turned" 
+      revealText="Developer" 
+      className="text-lg sm:text-xl md:text-2xl font-semibold"
+    />
+  </div>
+)}
+
 
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2 lg:top-2">
