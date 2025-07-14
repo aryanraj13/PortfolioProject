@@ -51,12 +51,12 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Currently learning Blockchain",
+      title: "Learning GoLang",
       description: "Current status : ",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute w-full md:w-full h-full lg:w-full",
       titleClassName: "justify-center md:justify-start lg:justify-center",
-      img: "/blockchain.jpeg",
+      img: "/golang.png",
       spareImg: "/grid.svg",
     },
     {
@@ -74,27 +74,27 @@ export const navItems = [
   export const projects = [
     {
       id: 1,
+      title: "MarketMentor - Stocks Chatbot",
+      des: "An open-source AI chatbot leveraging function calling to display TradingView stock market widgets. Built with the TradingView Widgets, and powered by Llama3-70b on Groq.",
+      img: "/marketmentor.png",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+      link: "https://marketmentor.netlify.app/",
+    },
+    {
+      id: 2,
       title: "BoxZone - Ecommerce",
       des: "BoxZone is an innovative e-commerce application built with cutting-edge technologies. It handles data with high scalability & performance.",
       img: "/pr1.png",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "https://twitter.com/mannupaaji",
+      link: "https://boxzone.netlify.app/",
     },
     {
-      id: 2,
+      id: 3,
       title: "LikeLoop - Social Media Application",
       des: "LikeLoop is a dynamic social media application that brings people together, allowing users to share updates, connect with friends.",
       img: "/like.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
       link: "https://likeloop.netlify.app/",
-    },
-    {
-      id: 3,
-      title: "eNotes - Digital Notebook",
-      des: "Your versatile digital companion for notes, ideas, and reminders made using MERN stack. Seamlessly jot down thoughts, organize tasks, and capture inspiration wherever you go.",
-      img: "/enotes.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "https://enotes-cloud.netlify.app/",
     },
     {
       id: 4,

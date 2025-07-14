@@ -55,7 +55,7 @@ export const BentoGridItem = ({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    const text = "aryanraj409.1.2@gmail.com";
+    const text = "aryanrajput200321@gmail.com";
     if (typeof navigator !== "undefined" && navigator.clipboard) {
       navigator.clipboard.writeText(text).then(() => {
         setCopied(true);
@@ -122,7 +122,7 @@ export const BentoGridItem = ({
               <div
                 className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 ${nyght} text-shadow text-shadow-orange-500 text-shadow-x-1 text-shadow-y-1 text-shadow-blur-9`}
               >
-                <Link href="http://localhost:3000/gallery">Life & Stories</Link>
+                <Link href="/gallery">Life & Stories</Link>
               </div>
               <div
                 className={`font-sans lg:text-base text-lg z-10 ${gilroy} text-slate-300`}
@@ -146,19 +146,19 @@ export const BentoGridItem = ({
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
-                    className="py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#03082d] hover:bg-[#5b24ad]"
+                    className="py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-slate-900 hover:bg-slate-950"
                   >
                     {item}
                   </span>
                 ))}
-                <span className=" py-4 px-3 rounded-lg text-center bg-[#03082d]"></span>
+                <span className=" py-4 px-3 rounded-lg text-center bg-slate-900"></span>
               </div>
               <div className="flex flex-col gap-3">
-                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#03082d]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-slate-900"></span>
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
-                    className="py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#03082d] hover:bg-[#5b24ad]"
+                    className="py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-slate-900 hover:bg-slate-950"
                   >
                     {item}
                   </span>

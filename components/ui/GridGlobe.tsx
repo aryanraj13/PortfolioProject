@@ -9,27 +9,28 @@ const World = dynamic(() => import("./Globe").then((m) => m.World), {
 
 const GridGlobe = () => {
   const globeConfig = {
-    pointSize: 4,
-    globeColor: "#062056",
-    showAtmosphere: true,
-    atmosphereColor: "#FFFFFF",
-    atmosphereAltitude: 0.1,
-    emissive: "#062056",
-    emissiveIntensity: 0.1,
-    shininess: 0.9,
-    polygonColor: "rgba(255,255,255,0.7)",
-    ambientLight: "#38bdf8",
-    directionalLeftLight: "#ffffff",
-    directionalTopLight: "#ffffff",
-    pointLight: "#ffffff",
-    arcTime: 1000,
-    arcLength: 0.9,
-    rings: 1,
-    maxRings: 3,
-    initialPosition: { lat: 22.3193, lng: 114.1694 },
-    autoRotate: true,
-    autoRotateSpeed: 0.5,
-  };
+  pointSize: 4,
+  globeColor: "#0f172a", // changed to a deeper navy (was "#062056")
+  showAtmosphere: true,
+  atmosphereColor: "#38bdf8", // soft cyan glow (was "#FFFFFF")
+  atmosphereAltitude: 0.15, // slightly enhanced atmosphere
+  emissive: "#0f172a", // match globeColor
+  emissiveIntensity: 0.2, // increased for better glow
+  shininess: 1.2, // slightly shinier surface
+  polygonColor: "rgba(255,255,255,0.3)", // more subtle polygon
+  ambientLight: "#0ea5e9", // light cyan ambient (was "#38bdf8")
+  directionalLeftLight: "#ffffff",
+  directionalTopLight: "#f0f9ff", // cooler top light
+  pointLight: "#bae6fd", // soft blueish point light
+  arcTime: 1000,
+  arcLength: 0.9,
+  rings: 1,
+  maxRings: 3,
+  initialPosition: { lat: 22.3193, lng: 114.1694 },
+  autoRotate: true,
+  autoRotateSpeed: 0.5,
+};
+
   const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
   const sampleArcs = [
     {
