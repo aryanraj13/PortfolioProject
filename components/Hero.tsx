@@ -36,7 +36,7 @@ const Hero = () => {
             </Highlight>
           </div>
           <p className="text-center tracking-wider text-sm md:text-sm lg:text-base mt-4">
-            Front End Developer who focuses <br /> on writing clean, elegant and <br /> efficient code. Love HTML, CSS, <br /> WordPress and a touch of jQuery.
+            Full stack developer who focuses <br /> on writing clean, elegant and <br /> efficient code. Love HTML, CSS, <br /> Javascript and a touch of MongoDB.
           </p>
         </div>
       </div>

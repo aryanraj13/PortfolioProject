@@ -109,9 +109,35 @@ const imageFilenames = [
   "IMG_1293.JPG", "IMG_1294.JPG", "IMG_1301.JPG", "IMG_1305.JPG",
   "IMG_1746.jpg", "IMG_1765.jpg", "IMG_1779.jpg", "IMG_1785.jpg",
   "IMG_1769.jpg", "IMG_1847.jpg", "IMG_20221226_020839_229.jpg", "IMG_20231209_223018_754.jpg",
-  "IMG_1788.jpg", "IMG_1845.jpg", "IMG_1850.jpg", "IMG_20231209_223006_303.jpg",
-  "IMG_20231213_190252_446.jpg", "IMG_20231218_172526.jpg", "IMG_20231219_082423.jpg",
-  "IMG_20240425_203216_516.jpg", "IMG_20240425_203216_708.jpg", "IMG_20240524_111923.jpg", "IMG_20240524_192633.jpg"
+  "IMG_1788.jpg", "IMG_1845.jpg", "IMG_1850.jpg","photo_6319088815016364286_y.jpg",
+  "photo_6052875214318057988_y.jpg",
+  "photo_6319088815016364264_y.jpg", 
+  "photo_6319088815016364266_y.jpg",
+  "photo_6319088815016364268_y.jpg",
+  "photo_6319088815016364256_y.jpg",
+  "photo_6319088815016364251_y.jpg",
+  "photo_6319088815016364253_y.jpg",
+  "photo_6319088815016364272_y.jpg",//gh
+  "photo_6319088815016364263_y.jpg",
+  "photo_6319088815016364285_y.jpg",
+  "photo_6319088815016364281_y.jpg",
+  "IMG_20240524_193740.jpg",
+  "WhatsApp Image 2025-07-15 at 16.22.26_403a2699.jpg",
+  "photo_6319088815016364282_y.jpg",
+  "photo_6319088815016364283_y.jpg",
+  "photo_6319088815016364284_y.jpg",
+  "WhatsApp Image 2025-07-15 at 16.22.26_3c30febb.jpg",
+  "WhatsApp Image 2025-07-15 at 16.22.26_246fc5c5.jpg",
+  "photo_6319088815016364260_y.jpg",
+  "WhatsApp Image 2025-07-15 at 16.22.26_13675d19.jpg",
+  "WhatsApp Image 2025-07-15 at 16.22.26_a03d274b.jpg",
+  "WhatsApp Image 2025-07-15 at 16.22.26_a7d283d7.jpg",
+  "WhatsApp Image 2025-07-15 at 16.22.26_b12f2ca8.jpg",
+  "WhatsApp Image 2025-07-15 at 16.22.26_c6aa6688.jpg",
+  "WhatsApp Image 2025-07-15 at 16.22.26_ccebafcf.jpg",
+  "WhatsApp Image 2025-07-15 at 16.22.26_d7301fcd.jpg",
+  "IMG_20231218_172526.jpg","photo_6319088815016364270_y.jpg","WhatsApp Image 2025-07-15 at 16.22.26_c84486a4.jpg","IMG_20231219_082423.jpg",
+  "photo_6319088815016364267_y.jpg","WhatsApp Image 2025-07-15 at 16.22.26_6737f13c.jpg","WhatsApp Image 2025-07-15 at 16.22.26_328cb1fc.jpg","IMG-20230919-WA0074.jpg","photo_6319088815016364265_y.jpg","photo_6319088815016364261_y.jpg"
 ];
 
 const cards = imageFilenames.map((filename, index) => ({
