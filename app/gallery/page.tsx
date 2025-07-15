@@ -82,11 +82,22 @@ const Page = () => {
       <h1 className="heading text-center text-shadow text-shadow-amber-800 mt-12 mb-7 px-4 lg:max-w-[45vw] z-20 text-3xl sm:text-4xl">
         Life through my{" "}
         <LinkPreview url="https://in.pinterest.com/aryanraj_13/_pins/" className="font-bold">
-          <button className="inline-flex h-14 sm:h-16 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors hover:text-slate-400 mt-2">
-            <span className={`${nyght}`}>eyes</span>
-          </button>
-        </LinkPreview>
+                <button className="inline-flex h-14 sm:h-16 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-3 font-medium text-white transition-colors hover:text-slate-400 mt-2">
+                  <div className="flex items-center gap-1">
+                    <Image
+                      src="/pinter.png"
+                      alt="Pinterest Icon"
+                      width={32}
+                      height={32}
+                      className="inline-block"
+                    />
+                    <span className={nyght}>eyes</span>
+                  </div>
+                </button>
+              </LinkPreview>
       </h1>
+
+      
 
       <div className="relative w-full max-w-4xl px-4">
         {/* Gradients */}

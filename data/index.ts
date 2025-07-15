@@ -370,24 +370,156 @@ export const navItems = [
   
 
   export const cinemaposters = [
-    {
-      name: "Game of thrones",
-      poster: "/posters/got.jpg",
-      year: "2011",
-      director: "D & D",
-    },
-    {
-      name: "Dune Part Two",
-      poster: "/posters/dune2.jpeg",
-      year: "2024",
-      director: "Denis Villeneuve",
-    },
-    {
-      name: "House of Dragons",
-      poster: "/posters/hotd.jpg",
-      year: "2022",
-      director: "Ryan Condal"
-    },
-    
-  ];
+  {
+    name: "Game of Thrones",
+    poster: "/posters/got.jpg",
+    year: "2011",
+    director: "D & D",
+  },
+  {
+    name: "Dune:Part Two",
+    poster: "/posters/dune2.jpeg",
+    year: "2024",
+    director: "Denis Villeneuve",
+  },
+  {
+    name: "House of the Dragon",
+    poster: "/posters/hotd.jpg",
+    year: "2022",
+    director: "Ryan Condal",
+  },
+  {
+    name: "1917",
+    poster: "/posters/1917 (2019).jpg",
+    year: "2019",
+    director: "Sam Mendes",
+  },
+  {
+    name: "Air",
+    poster: "/posters/Air (2023).png",
+    year: "2023",
+    director: "Ben Affleck",
+  },
+  {
+    name: "Arrival",
+    poster: "/posters/Arrival (2016).jpeg",
+    year: "2016",
+    director: "Denis Villeneuve",
+  },
+  {
+    name: "Ballerina",
+    poster: "/posters/Ballerina (2025).png",
+    year: "2025",
+    director: "Len Wiseman",
+  },
+  {
+    name: "Chernobyl",
+    poster: "/posters/Chernobyl (2019).png",
+    year: "2019",
+    director: "Johan Renck",
+  },
+  {
+    name: "Don't Look Up",
+    poster: "/posters/Don't Look Up (2021).jpg",
+    year: "2021",
+    director: "Adam McKay",
+  },
+  {
+    name: "Dunkirk",
+    poster: "/posters/Dunkirk (2017).jpeg",
+    year: "2017",
+    director: "Christopher Nolan",
+  },
+  {
+    name: "Furiosa",
+    poster: "/posters/Furiosa- A Mad Max Saga (2024).jpg",
+    year: "2024",
+    director: "George Miller",
+  },
+  {
+    name: "Man of Steel",
+    poster: "/posters/Man of Steel (2013).jpg",
+    year: "2013",
+    director: "Zack Snyder",
+  },
+  {
+    name: "Spider-Man: Into",
+    poster: "/posters/Spider-Man- Into the Spider-Verse (2018).jpg",
+    year: "2018",
+    director: "Lord & Miller",
+  },
+  {
+    name: "Marvel Studios",
+    poster: "/posters/Marvel Studios.jpeg",
+    year: "2008-19",
+    director: "Kevin Feige",
+  },
+  {
+    name: "MI : Fallout",
+    poster: "/posters/MissionImpossibleFallout (2018).png",
+    year: "2018",
+    director: "Chris. McQuarrie",
+  },
+  {
+    name: "Oppenheimer",
+    poster: "/posters/Oppenheimer (2023).jpg",
+    year: "2023",
+    director: "Christopher Nolan",
+  },
+  {
+    name: "Spider-Man: Across",
+    poster: "/posters/Spider-Man- Across the Spider-Verse (2023).png",
+    year: "2023",
+    director: "Lord & Miller",
+  },
+  {
+    name: "The Dark Knight",
+    poster: "/posters/The Dark Knight (2008).jpeg",
+    year: "2008",
+    director: "Christopher Nolan",
+  },
+  {
+    name: "The Penguin",
+    poster: "/posters/The Penguin (2024).png",
+    year: "2024",
+    director: "Craig Zobel",
+  },
+  {
+    name: "Dune",
+    poster: "/posters/Dune (2021).jpg",
+    year: "2021",
+    director: "Denis Villeneuve",
+  },
+  {
+    name: "MI : Final Reckoning",
+    poster: "/posters/MissionImpossibleThe Final Reckoning (2025).png",
+    year: "2025",
+    director: "Chris. McQuarrie",
+  },
+  {
+    name: "Thunderbolts*",
+    poster: "/posters/Thunderbolts_ (2025).jpg",
+    year: "2025",
+    director: "Jake Schreier",
+  },
+  {
+    name: "Zack Snyder's JL",
+    poster: "/posters/Zack Snyder's Justice League (2021).jpg",
+    year: "2021",
+    director: "Zack Snyder",
+  },
+  {
+    name: "F1",
+    poster: "/posters/F1 (2025).png",
+    year: "2025",
+    director: "Joseph Kosinski",
+  },
+  {
+    name: "The Batman",
+    poster: "/posters/The Batman (2022).png",
+    year: "2022",
+    director: "Matt Reeves",
+  },
+];
+
   
