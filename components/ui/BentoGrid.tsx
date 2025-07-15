@@ -11,6 +11,7 @@ import MagicButton from "./MagicButton";
 import { TextRevealCard } from "./TextRevealCard";
 import Link from "next/link";
 import { gilroy, gloock, nyght } from "@/utils/fonts";
+import { PointerHighlight } from "./pointer-highlight";
 
 export const BentoGrid = ({
   className,
@@ -122,7 +123,7 @@ export const BentoGridItem = ({
               <div
                 className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 ${nyght} text-shadow text-shadow-orange-500 text-shadow-x-1 text-shadow-y-1 text-shadow-blur-9`}
               >
-                <Link href="/gallery">Life & Stories</Link>
+                <PointerHighlight><Link href="/gallery">Life & Stories</Link></PointerHighlight>
               </div>
               <div
                 className={`font-sans lg:text-base text-lg z-10 ${gilroy} text-slate-300`}
