@@ -3,6 +3,7 @@ import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IconCheck, IconCopy } from "@tabler/icons-react";
+import { BackgroundBeamsWithCollision } from "./background-beams-with-collision";
 
 type CodeBlockProps = {
   language: string;
@@ -54,7 +55,9 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
+    
     <div className="relative w-full rounded-lg bg-zinc-900 p-4 font-mono text-sm">
+      <BackgroundBeamsWithCollision>
       <div className="flex flex-col gap-2">
         {tabsExist && (
           <div className="flex  overflow-x-auto">
@@ -109,6 +112,7 @@ export const CodeBlock = ({
       >
         {String(activeCode)}
       </SyntaxHighlighter>
+      </BackgroundBeamsWithCollision>
     </div>
   );
 };
