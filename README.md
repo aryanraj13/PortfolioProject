@@ -4,6 +4,24 @@ A modern and interactive developer portfolio built with **Next.js**, **TypeScrip
 
 ---
 
+# 🖼️ Preview
+
+## Hero Section
+
+![Hero Section](/public/hero.png)
+
+---
+
+## Projects Showcase
+
+![Projects Section](/public/Screenshot%202026-05-26%20154121.png)
+
+---
+
+## Bento Grid / About Section
+
+![Bento Grid](/public/Screenshot%202026-05-26%20154138.png)
+
 ## 🚀 Features
 
 - Modern responsive UI/UX
@@ -27,24 +45,6 @@ A modern and interactive developer portfolio built with **Next.js**, **TypeScrip
 - React Icons
 
 ---
-
-# 🖼️ Preview
-
-## Hero Section
-
-![Hero Section](/public/hero.png)
-
----
-
-## Projects Showcase
-
-![Projects Section](/public/Screenshot%202026-05-26%20154121.png)
-
----
-
-## Bento Grid / About Section
-
-![Bento Grid](/public/Screenshot%202026-05-26%20154138.png)
 
 ---
 
