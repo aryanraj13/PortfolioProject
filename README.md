@@ -32,31 +32,31 @@ A modern and interactive developer portfolio built with **Next.js**, **TypeScrip
 
 ## Hero Section
 
-![Hero Section](./Screenshot%202026-05-26%20154057.png)
+![Hero Section](/public/hero.png)
 
 ---
 
 ## Projects Showcase
 
-![Projects Section](./Screenshot%202026-05-26%20154121.png)
+![Projects Section](/public/Screenshot%202026-05-26%20154121.png)
 
 ---
 
 ## Bento Grid / About Section
 
-![Bento Grid](./Screenshot%202026-05-26%20154138.png)
+![Bento Grid](/public/Screenshot%202026-05-26%20154138.png)
 
 ---
 
 ## Cinema & Music Section
 
-![Cinema Section](./Screenshot%202026-05-26%20154246.png)
+![Cinema Section](/public/Screenshot%202026-05-26%20154246.png)
 
 ---
 
 ## Life & Stories Gallery
 
-![Gallery Section](./Screenshot%202026-05-26%20154315.png)
+![Gallery Section](/public/Screenshot%202026-05-26%20154315.png)
 
 ---
 
