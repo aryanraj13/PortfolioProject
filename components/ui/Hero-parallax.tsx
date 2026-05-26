@@ -225,7 +225,7 @@ export const ProductCard = ({
     >
       <Link
         href={product.link}
-        className="block group-hover/product:shadow-2xl "
+        className="block group-hover/product:shadow-lg "
         target="_blank"
       >
         <Image

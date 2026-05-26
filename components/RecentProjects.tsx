@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 import { CgNotes } from "react-icons/cg";
-
+import Image from "next/image";
+import dynamic from "next/dynamic";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
 import {
@@ -14,7 +15,15 @@ import {
   useModal,
 } from "@/components/ui/AnimatedModal";
 import { AnimatePresence } from "framer-motion";
-import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
+
+const CanvasRevealEffect = dynamic(
+  () =>
+    import("@/components/ui/CanvasRevealEffect").then(
+      (mod) => mod.CanvasRevealEffect
+    ),
+  { ssr: false }
+);
+
 import Link from "next/link";
 import { gilroy, nyght } from "@/utils/fonts";
 
@@ -63,20 +72,18 @@ const RecentProjectsContent = ({
         <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
         <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
         <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-        <AnimatePresence>
-          <div className="h-full w-full absolute inset-0">
+          <div className="hidden md:block h-full w-full absolute inset-0">
             <CanvasRevealEffect
-                animationSpeed={3}
+                animationSpeed={1}
                 containerClassName="bg-black"
                 colors={[
                   [236, 72, 153],
                   [232, 121, 249],
                 ]}
-                dotSize={2}
+                dotSize={1}
               />
 
           </div>
-        </AnimatePresence>
         <div className="relative z-20">
           <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 font-bold text-shadow text-shadow-fuchsia-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-2">
   Recent
@@ -102,19 +109,25 @@ const RecentProjectsContent = ({
           >
             <Modal>
               <PinContainer title={item.link} href={item.link}>
-                <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
-                  <div
-                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                    style={{ backgroundColor: "#13162D" }}
-                  >
-                    <img src="/bg.png" alt="bgimg" />
-                  </div>
-                  <img
-                    src={item.img}
-                    alt="cover"
-                    className="z-10 absolute bottom-0"
-                  />
-                </div>
+                <div className="relative sm:w-[570px] w-[80vw] aspect-video overflow-hidden rounded-3xl mb-10">
+  {/* Background */}
+  <Image
+  src="/bg.png"
+  alt="bgimg"
+  fill
+  className="object-cover opacity-40"
+/>
+
+  {/* Project Image */}
+  <Image
+  src={item.img}
+  alt="cover"
+  fill
+  className="object-cover z-10"
+  loading="lazy"
+  sizes="(max-width: 768px) 80vw, 570px"
+/>
+</div>
 
                 <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                   {item.title}
@@ -181,11 +194,15 @@ const RecentProjectsContent = ({
             key={index}
             className="flex flex-col items-center text-center w-full max-w-3xl"
           >
-            <img
-              src={item.src}
-              alt={`project-${index}`}
-              className="w-full rounded-xl border border-neutral-800 object-cover"
-            />
+            <div className="relative w-full aspect-video">
+  <Image
+    src={item.src}
+    alt={`project-${index}`}
+    fill
+    className="rounded-xl border border-neutral-800 object-cover"
+    loading="lazy"
+  />
+</div>
             <p className="text-white text-base mt-3 max-w-xl">{item.desc}</p>
           </div>
         )

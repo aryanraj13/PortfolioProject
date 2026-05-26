@@ -133,7 +133,26 @@ export const BentoGridItem = ({
             </div>
           )}
 
-          {id === 2 && <GridGlobe />}
+          {id === 2 && (
+  <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+    
+    {/* Grid Background */}
+    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+
+    {/* Glow */}
+    <div className="absolute w-40 h-40 bg-fuchsia-500/20 blur-3xl rounded-full" />
+
+    {/* Content */}
+    <div className="relative z-10 text-center">
+      <h3 className="text-2xl lg:text-4xl font-bold">
+        Building
+      </h3>
+      <p className="text-slate-400 mt-2 text-sm lg:text-base">
+        scalable digital experiences
+      </p>
+    </div>
+  </div>
+)}
 
           {id === 4 && (
   <div className="w-full flex justify-center items-center px-2 sm:px-4 py-2">

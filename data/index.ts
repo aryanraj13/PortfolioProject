@@ -20,7 +20,7 @@ export const navItems = [
     },
     {
       id: 2,
-      title: "I'm very flexible with time zone communications",
+      title: "",
       description: "",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
@@ -72,8 +72,98 @@ export const navItems = [
   ];
   
   export const projects = [
+    {
+  id: 1,
+  title: "GoTrack - Finance Management Platform",
+
+  des: "A modern full-stack finance tracking platform for managing transactions, analytics, accounts, and budgets with real-time visual insights.",
+
+  img: "/gotrack.png",
+
+  media: [
+    {
+      src: "/gotrack-dashboard.png",
+      desc: "GoTrack provides a powerful financial dashboard with real-time income, expense, balance, and transaction analytics. Interactive charts and modern UI components help users monitor financial activity effortlessly."
+    },
+
+    {
+      src: "/gotrack-transactions.png",
+      desc: "Users can add, filter, search, and manage transactions with an elegant transaction management system. Real-time updates ensure smooth financial tracking and organization."
+    },
+
+    {
+  src: "/gotrack-login.png",
+  desc: "GoTrack features a professional authentication system with beautifully designed login and registration pages. The modern split-screen layout, premium dark theme, and responsive design create a polished fintech experience for users."
+},
+
+    {
+      src: "/gotrack-analytics.png",
+      desc: "Advanced analytics visualize monthly spending trends and category breakdowns through dynamic charts and insights. Users can easily understand spending behavior and financial patterns."
+    },
+
+    {
+      src: "/gotrack-accounts.png",
+      desc: "The accounts module allows users to manage multiple wallets, bank accounts, and credit cards in one place. Each account card displays balances with a clean and modern design."
+    },
+
+    {
+      src: "/gotrack-categories.png",
+      desc: "GoTrack supports custom financial categories with color-coded organization and emoji support. This makes budgeting and expense classification intuitive and visually engaging."
+    },
+
+    {
+      src: "/gotrack-settings.png",
+      desc: "The settings section enables profile management, account preferences, and secure logout functionality. The responsive UI ensures a smooth experience across all devices."
+    }
+  ],
+
+  iconLists: [
+    "/re.svg",
+    "/next.svg",
+    "/tail.svg",
+    "/js.png",
+    "/mongo.svg",
+    "/go.svg"
+  ],
+
+  link: "https://expensetrackergo.netlify.app/"
+},
   {
-    id: 1,
+  id: 2,
+  title: "VoteChain - Decentralized Voting System",
+  des: "A blockchain-based voting platform enabling secure, transparent, and tamper-proof elections using Ethereum smart contracts.",
+  img: "/votechain.png",
+  media: [
+    {
+      src: "/1.png",
+      desc: "VoteChain uses Solidity smart contracts deployed on Ethereum to manage election workflows securely. All votes, candidates, and voter records are stored immutably on-chain, ensuring transparency and trust."
+    },
+    {
+      src: "/2.png",
+      desc: "The admin dashboard allows election setup, candidate creation, voter verification, and election lifecycle management. Smart contract access control ensures that only the admin can manage critical election operations."
+    },
+    {
+      src: "/3.png",
+      desc: "Voters connect their MetaMask wallets to register and participate in elections securely. Each transaction is cryptographically signed, preventing unauthorized voting and ensuring voter authenticity."
+    },
+    {
+      src: "/4.png",
+      desc: "The frontend is built with React and Web3.js, enabling seamless interaction between users and the Ethereum blockchain. Real-time blockchain data is fetched dynamically for voting and result updates."
+    },
+    {
+      src: "/5.png",
+      desc: "Ganache provides a local Ethereum blockchain environment for testing and deployment, while Truffle handles smart contract compilation, migration, and development workflow automation."
+    },
+    {
+      src: "/6.png",
+      desc: "The results module automatically retrieves vote counts from the blockchain and displays election outcomes transparently. Immutable vote storage eliminates the possibility of result manipulation."
+    }
+  ],
+  iconLists: ["/re.svg", "/js.png", "/Solidity.png", "/web3.png", "/eth.png"],
+  link: "https://github.com/aryanraj13/VoteChain-Decentralised-Voting-System"
+},
+  {
+    id: 3,
     title: "MarketMentor - Stocks Chatbot",
     des: "An open-source AI chatbot leveraging function calling to display TradingView stock market widgets.",
     img: "/marketmentor.png",
@@ -107,7 +197,7 @@ export const navItems = [
     link: "https://marketmentor.netlify.app/"
   },
   {
-    id: 2,
+    id: 4,
     title: "BoxZone - Ecommerce",
     des: "A modern e-commerce platform with advanced scalability and responsiveness.",
     img: "/pr1.png",
@@ -143,66 +233,6 @@ export const navItems = [
     ],
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/nodejs.png","/mongodb.png"],
     link: "https://boxzone.netlify.app/"
-  },
-  {
-    id: 3,
-    title: "LikeLoop - Social Media App",
-    des: "A real-time social media platform to share updates and connect with friends.",
-    img: "/like.png",
-    media: [
-      {
-        src: "/media1.png",
-        desc: "LikeLoop is built using the MERN stack with JWT-based authentication. It allows users to securely sign up, log in, and interact with others. User data and sessions are protected through encrypted tokens."
-      },
-      {
-        src: "/media2.png",
-        desc: "Users can create, edit, and delete posts in a real-time social feed. Each post supports media uploads, likes, and threaded comments. This fosters engagement and user interaction within the app."
-      },
-      {
-        src: "/media3.png",
-        desc: "Every user has a customizable profile displaying their posts and info. Profiles can be explored by other users for networking and discovery. Profile updates are dynamic and synced with Redux store."
-      },
-      {
-        src: "/media4.png",
-        desc: "Advanced search helps users find posts and friends instantly. Real-time updates ensure users are notified about likes or comments.This keeps the platform active and responsive at all times."
-      },
-      {
-        src: "/media5.png",
-        desc: "The app features a clean, responsive layout using Material-UI. Consistent styling and component reuse create a smooth UX. It adapts seamlessly across desktops, tablets, and phones."
-      }
-    ],
-    iconLists: ["/next.svg", "/tail.svg", "/nodejs.png","/mongodb.png","/ts.svg", "/stream.svg"],
-    link: "https://likeloop.netlify.app/"
-  },
-  {
-    id: 4,
-    title: "Globe Glider - Travel Website",
-    des: "A full-fledged tourism website to explore and book global travel experiences.",
-    img: "/package1.png",
-    media: [
-      {
-        src: "/ph1.png",
-        desc: "Globe Glider helps users explore destinations and plan custom trips. Built with PHP, HTML, CSS, JavaScript, and Bootstrap for dynamic pages. It offers a smooth and interactive user experience for travelers."
-      },
-      {
-        src: "/ph2.png",
-        desc: "Users can design personalized tour packages using built-in surveys. Preferences like budget, travel dates, and destinations are gathered. It generates tailored plans based on user inputs and interests."
-      },
-      {
-        src: "/ph3.png",
-        desc: "The site integrates Razorpay for secure, fast, and reliable payments. Users can book tours and pay online without leaving the platform. This streamlines the checkout process for hassle-free travel planning."
-      },
-      {
-        src: "/ph5.png",
-        desc: "The platform features interactive maps and curated destination info. Users can explore highlights, attractions, and travel routes visually. This helps travelers better plan their journeys before booking."
-      },
-      {
-        src: "/ph4.png",
-        desc: "Globe Glider is built with Bootstrap to ensure responsive design. Whether on desktop or mobile, the layout adjusts for a smooth UX. Travel planning is accessible anytime, anywhere."
-      }
-    ],
-    iconLists: ["/php.png", "/js.png", "/html.png", "/database.png"],
-    link: "https://github.com/aryanraj13/Travel-and-Tourism-Website"
   }
 ];
 

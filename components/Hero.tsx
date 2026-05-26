@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <div className="min-h-screen">
     <div className="text-center md:tracking-wider text-sm md:text-lg lg:text-2xl pt-32 text-shadow text-shadow-cyan-400 text-shadow-x-1 text-shadow-y-1 text-shadow-blur-9">
-            Hi! I&apos;m <FlipWords className={` lg:text-9xl md:text-8xl text-8xl ${nyght}`} duration={1200} words={["Aryan","आरयन"]} /> <br/><span className="text-sm"> a<FlipWords duration={1200} words={["designer","<coder>"]} />Developer based in India.</span>
+            Hi! I&apos;m <span className={` lg:text-9xl md:text-8xl text-8xl ${nyght}`} >&nbsp;Aryan</span> <br/><span className="text-sm"> a<FlipWords duration={1200} words={["designer","<coder>"]} /> based in India.</span>
           </div>
       <div className="md:gap-0 lg:gap-0 gap-8 flex md:flex-row lg:flex-row flex-col justify-around mt-20">
         {/* Designer Section */}
@@ -24,7 +24,7 @@ const Hero = () => {
             </Highlight>
           </div>
           <p className="text-center tracking-wider text-sm md:text-sm lg:text-base mt-4 md:pr-56 lg:pr-56">
-            UI/UX Designer with a passion for <br /> designing beautiful and functional <br /> user experiences. Minimalist who <br /> believes that less is more.
+            Creative developer with a passion <br /> for designing beautiful and functional <br /> user experiences. Minimalist who <br /> believes that less is more.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ const Hero = () => {
             </Highlight>
           </div>
           <p className="text-center tracking-wider text-sm md:text-sm lg:text-base mt-4">
-            Full stack developer who focuses <br /> on writing clean, elegant and <br /> efficient code. Love HTML, CSS, <br /> Javascript and a touch of MongoDB.
+            Full stack developer who focuses <br /> on writing clean, elegant and <br /> efficient code. Love React, Javascript, <br /> Golang and building applications.
           </p>
         </div>
       </div>
@@ -53,7 +53,7 @@ const Hero = () => {
             </div>
 
       <div className="text-center">
-      <a href="https://drive.google.com/file/d/1eLTnaAhFnmER3S2XcPGG4EOX7o_Et5Hq/view?usp=sharing" 
+      <a href="https://drive.google.com/file/d/1jP7Q9BFYgmnkDgmUOsRaRN7kNZQoedDZ/view?usp=sharing" 
       target="_blank"
       rel="noopener noreferrer">
         <div className="mt-12 md:mt-0 lg:mt-0 relative z-10">
