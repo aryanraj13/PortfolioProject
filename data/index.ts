@@ -74,6 +74,40 @@ export const navItems = [
   export const projects = [
     {
   id: 1,
+  title: "Personal Brain - AI Knowledge Assistant",
+
+  des: "An AI-powered personal knowledge assistant that connects Gmail and Google Drive to retrieve, contextualize, and reason over personal information.",
+
+  img: "/personalbrain.png",
+
+  media: [
+    {
+      src: "/personalbrain.png",
+      desc: "Personal Brain provides a conversational AI interface for interacting with personal knowledge. Users can ask natural-language questions and receive context-aware responses generated from connected sources."
+    },
+
+    {
+      src: "/chat1p.png",
+      desc: "The chat interface enables users to query their connected knowledge base using natural language. Retrieved information is processed and passed to Gemini to generate relevant, context-aware answers."
+    },
+
+    {
+      src: "/chat2p.png",
+      desc: "The retrieval layer combines connected data sources into a unified knowledge workflow. Relevant context is retrieved before generation, improving the accuracy and relevance of responses to user queries."
+    }
+  ],
+
+  iconLists: [
+    "/re.svg",
+    "/next.svg",
+    "/ts.svg",
+    "/tail.svg",
+  ],
+
+  link: "https://github.com/aryanraj13/PersonalBrain"
+},
+    {
+  id: 2,
   title: "GoTrack - Finance Management Platform",
 
   des: "A modern full-stack finance tracking platform for managing transactions, analytics, accounts, and budgets with real-time visual insights.",
@@ -129,7 +163,7 @@ export const navItems = [
   link: "https://expensetrackergo.netlify.app/"
 },
   {
-  id: 2,
+  id: 3,
   title: "VoteChain - Decentralized Voting System",
   des: "A blockchain-based voting platform enabling secure, transparent, and tamper-proof elections using Ethereum smart contracts.",
   img: "/votechain.png",
@@ -163,7 +197,7 @@ export const navItems = [
   link: "https://github.com/aryanraj13/VoteChain-Decentralised-Voting-System"
 },
   {
-    id: 3,
+    id: 4,
     title: "MarketMentor - Stocks Chatbot",
     des: "An open-source AI chatbot leveraging function calling to display TradingView stock market widgets.",
     img: "/marketmentor.png",
@@ -197,7 +231,7 @@ export const navItems = [
     link: "https://marketmentor.netlify.app/"
   },
   {
-    id: 4,
+    id: 5,
     title: "BoxZone - Ecommerce",
     des: "A modern e-commerce platform with advanced scalability and responsiveness.",
     img: "/pr1.png",
@@ -308,7 +342,7 @@ export const navItems = [
       id: 1,
       title: "Jaypee Institute of Information Technology, Noida",
       desc: "B.Tech Computer Science",
-      timeframe:"September 2022 - April 2026 (Currently in 4th year)",
+      timeframe:"September 2022 - May 2026",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
