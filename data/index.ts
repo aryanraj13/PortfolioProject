@@ -104,7 +104,7 @@ export const navItems = [
     "/tail.svg",
   ],
 
-  link: "https://github.com/aryanraj13/PersonalBrain"
+  link: "https://personalbrain-sooty.vercel.app/"
 },
     {
   id: 2,
