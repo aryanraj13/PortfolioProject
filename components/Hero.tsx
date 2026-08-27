@@ -53,7 +53,7 @@ const Hero = () => {
             </div>
 
       <div className="text-center">
-      <a href="https://drive.google.com/file/d/1jP7Q9BFYgmnkDgmUOsRaRN7kNZQoedDZ/view?usp=sharing" 
+      <a href="https://drive.google.com/file/d/1m6Qt_eLyoytEUEIqgqDVeIQ2dGvE2WI3/view?usp=sharing" 
       target="_blank"
       rel="noopener noreferrer">
         <div className="mt-12 md:mt-0 lg:mt-0 relative z-10">
